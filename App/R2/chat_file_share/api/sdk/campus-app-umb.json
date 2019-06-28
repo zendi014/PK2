@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "campus-app-umb",
+  "private_key_id": "6c2eba45995d36b549df6a79906f16a92ae23efe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCd4gSj2gzKVpy3\nTe45IRde+1mhq9yE6Jv5qprgBRJH+gyFAhbHfcOahGmViSFCkp3XI/hNdjoiNFUg\nw69jdXuygF7cHQwo4SNXR5foC8PZTZw05Jvw02dVP9N/Za/2dngt8QOqFQJI71dy\nF88S/4D/8xF2+gFSBUgVuY+mjsKeOVV2Tz6WF0ae5fqxlemy1vAUop61yQqp7Dcy\n/fxRt8qTWLn4QAJ5Fh55IpXOAFYvFts6cFB9cxLG9HA1TDxnmB/pxmoBuipbNMRF\nsgJyrlPN2izh2xkCABEyCxc2MOeA2P5et1oDddPqZmXseAe3ibAlYQN8A3hVgMsn\nYh5SoaeTAgMBAAECggEAALSqceMbqKnTsSDFDKvyP9oI6I80E/qbSBhjwMhvZhQ1\nfU5/ixUCQ8UskBSUtHqxFK9aH/Kf2vroM83N2iqwuyf9vaPQrknh0/AFXdXs0QbL\nN39BdM/h27AnYGF19ITAuV2Tz3QkbNLfp31PYIp/dXh0z/0JnGta3iIZv6j7Uy7c\nrA/jPbntbF1B22JuIBCq9QPAXU5wbv0i33pMQbVmsissoxeGi9C3upXUUZjzFDFk\nN3tM2TPvN5lN/BJE0wLvgIVIi3b9lpA1QsKyjwtI4EjUvVCnGxX2C6qhQTRmY9jH\n5592VSFvynokMUcIZwJ1e2JMhG1qLm57cIGZMMQ5KQKBgQDfMO2e4Eq/LqnKu+9Z\nkO8qgLZZSW97WEW46JikCPUnx3yWCsPajI6mVOdZsEKl05ZYHmXoep29ISneqObg\nGfDgrxv+gAfApVXYTwHdjLOrCsIqpSlEMYfqoGBK/RMB/WNiTg5xdFkxu/kxZWz/\nIwjSt4q/nET9s+cTGlMpcQpRFQKBgQC1F209LktlAfTa9oKAQNBSqxZn4RQKuqHd\n55er71tIT+3n5Ka5wNEt4VoqE5xErLdZswGvoZjbznqDBnJrFGZL3iywbsJtXBAP\nXxgj8Xn2HGouCimoW1WZqAKn/swzSS9liBWdnowiPrAfGAdSX8pKSCsMCwZulBPk\nQE0H7e+wBwKBgQDPkB0sJ8Lb0XWuSODrFtKVYGY02wqGVy1gLU/nHT2A5RCEKTbD\nRPxUy5jr2/Pfa8rh4EM91OplPTZHECTGPNm62p7aLA8JpbkUFUXS2Esuwi6Yokii\nVr3kAYoLsxe+PfvzLExaTq20hu/UdFLNY7OM44xxbc7rcidvqIe2fp3tkQKBgQCv\n8Cq5nhix8cyqT4VKha3gI0iJdCu8oMZSiYbaDJprDvzcp1E0dxjDsoWfC55vOj6I\nb1ncAOw54ck1MzZGwnMAksJoR7Ot/Bu+U21ovlr3uXOPd2AxqUrpFko+XVaXHStn\nQWd+02LignUqQHYcmeQ3dxYbhTqihEsvHym34ntUUQKBgQDGehqG/btvSy+Enczg\nNM+7HbWEeOSxW+Jz6Btxz0hZoBxP9K80u4rJN7BvgLQwqWlU7lGG+VH3hrHBhehv\nU2j4Bd8Ku/ZvJmJ+qWWpXKCJKpTpYGnOvuQbzNccjV9Q0sKIz9KAiUnCTUhULm3K\ne4HmuvRtzFmbkn+LT7WeZJMjew==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-xxvnw@campus-app-umb.iam.gserviceaccount.com",
+  "client_id": "109379207249493652659",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xxvnw%40campus-app-umb.iam.gserviceaccount.com"
+}

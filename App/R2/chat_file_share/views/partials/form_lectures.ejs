@@ -1,0 +1,97 @@
+
+<form action="#" method="post">
+
+  <div class="uk-form-row">
+
+      <div class="uk-grid">
+          <div class="uk-width-medium-1" style="margin-bottom:35px">
+              <h2>Add New Lecture</h2>
+          </div>
+
+          <div class="uk-width-medium-1" style="margin-bottom:15px">
+              <div class="md-input-wrapper">
+                <label>Lecture Name</label>
+                <input type="text" class="md-input" name="lecture_name" id="lecture_name">
+                <span class="md-input-bar"></span>
+              </div>
+          </div>
+
+          <div class="uk-width-medium-1-3" style="margin-bottom:15px">
+              <div class="md-input-wrapper">
+                <label>Code</label>
+                <input type="text" class="md-input" name="code">
+                <span class="md-input-bar"></span>
+              </div>
+          </div>
+
+          <div class="uk-width-medium-1-3" style="margin-bottom:15px">
+              <div class="md-input-wrapper">
+                <label>Mark</label>
+                <input type="text" class="md-input" name="mark">
+                <span class="md-input-bar"></span>
+              </div>
+          </div>
+
+          <div class="uk-width-medium-1-3" style="margin-bottom:15px">
+              <div class="md-input-wrapper">
+                <label>Room</label>
+                <input type="text" class="md-input" name="room">
+                <span class="md-input-bar"></span>
+              </div>
+          </div>
+          <div class="uk-width-medium-1-2" style="margin-bottom:15px">
+              <div class="md-input-wrapper">
+                <label>Time</label>
+                <input type="text" class="md-input" name="time">
+                <span class="md-input-bar"></span>
+              </div>
+          </div>
+
+          <div class="uk-width-medium-1-2" style="margin-bottom:15px">
+              <select class="md-input" name="major">
+                  <option selected value="none">Select major...</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Economics">Economics</option>
+              </select>
+          </div>
+
+          <div class="uk-width-medium-1" style="margin-bottom:35px">
+              <select id="lecturers" class="md-input" name="lecturer_key">
+                  <option selected value="none">Select Lecturer...</option>
+              </select>
+          </div>
+
+          <div class="uk-width-small-1-2" style="margin-bottom:15px">
+              <a class="md-btn md-btn-primary" id="add_new_lecture" href="javascript:void(0);" style="width:100%">Submit</a>
+          </div>
+
+          <div class="uk-width-small-1-2" style="margin-bottom:15px">
+              <a class="md-btn close_swal" href="javascript:void(0);" style="width:100%">Cancel</a>
+          </div>
+
+
+      </div>
+
+  </div>
+
+</form>
+
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+
+
+
+<script>
+    console.log("fjdsufsudihfuisdgifg");
+    var lid = '<%= lid %>';
+    console.log("lid:: "+lid)
+</script>
+
+
+<!-- serializejson -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"
+    crossorigin="anonymous"></script>

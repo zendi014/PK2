@@ -1,0 +1,17 @@
+<% var nm='' %>
+<%if(lr_id=="null"){%>
+    None of ID
+    <% nm="add" %>
+<%}else{%>
+    Selected ID:: <%= lr_id %>
+    <% nm="save" %>
+<%}%>
+
+<form method="post" action="#">
+    <input name="lecturer_name" placeholder="name" />
+    <input name="email" placeholder="email" />
+    <input name="interest" placeholder="interest" />
+    <button type="submit" class="submit_form_lecturer" dt_lr_id="<%= lr_id %>"><%= nm %> (+)</button>
+</form>
+
+<script type='text/javascript' src="/javascripts/partials/form_lecturer.js"></script>

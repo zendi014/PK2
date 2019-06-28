@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Basic Front End</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/sweetalert2@7">
+    </script>
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+
+
+    <style>
+      .bd-navbar {
+        min-height: 4rem;
+        background-color: #563d7c;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+      }
+      .btn-bd-download {
+          font-weight: 600;
+          color: #ffe484;
+          border-color: #ffe484;
+      }
+      .btn-bd-download:hover {
+        color: #212529;
+        background-color: #ffe484;
+        border-color: #ffe484;
+      }
+      .btn-bd-download:focus {
+        box-shadow: 0 0 0 3px rgba(#ffe484, .25);
+      }
+      .mtl{        
+        color: #cbbde2;
+        cursor:pointer
+      }
+      .mtl:hover{
+        color: #fff;
+        cursor:pointer
+      }
+
+      .md-icon{
+        cursor:pointer
+      }
+
+      .md-icon:hover{
+        color: #797979;
+        cursor:pointer
+      }
+      .form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  padding: .75rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  font-size: 12px;
+  
+      
+    </style>
+  </head>
+  <body class="bg-light">
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+      <h5 class="my-0 mr-md-auto font-weight-normal" style="color: #fff;">University of PK2</h5>
+
+      <nav class="my-2 my-md-0 mr-md-3">
+          <span class="p-2 mtl" link="/">Dashboard</span>
+          <spaan class="p-2 mtl" link="/conversation">Conversations</span>
+      </nav>
+
+      <a href="/logout" class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">
+        <i class="material-icons">
+          input
+        </i>
+        Logout
+      </a>
+
+    </header>

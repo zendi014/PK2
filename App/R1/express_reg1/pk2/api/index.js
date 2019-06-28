@@ -1,0 +1,26 @@
+var e = require('express');
+var r = e.Router();
+
+
+var u = require('./resources/users');
+r.get('/users', u.read); //Read
+r.post('/users', u.create); //Create
+r.put('/user/:key', u.update); //Update
+r.delete('/user/:key', u.delete); //Delete
+
+
+var l = require('./resources/lectures');
+r.get('/lectures', l.read); //Read
+r.post('/lectures', l.create); //Create
+r.put('/lecture/:key', l.update); //Update
+r.delete('/lecture/:key', l.delete); //Delete
+
+
+var al = require('./resources/apply_lecture');
+r.get('/apply_lecture', al.read); //Read
+r.post('/apply_lecture', al.create); //Create
+r.put('/apply_lecture/:key', al.update); //Update
+r.delete('/apply_lecture/:key', al.delete); //Delete
+
+
+module.exports = r;

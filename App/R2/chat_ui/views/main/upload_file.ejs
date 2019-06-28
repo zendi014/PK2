@@ -1,0 +1,49 @@
+<% include ../h %>
+
+
+<div class="card">
+    <div class="card-body">
+
+        <input id="input_file" type="file" multiple="multiple" />
+        <br/><br/>
+        <button id="btn_upload" >UPLOAD</button>
+        <br/><br/>
+        <div id="files_name">....</div>
+
+    </div>
+</div>
+
+
+
+<script>
+    var file = null;
+    $(document).on("change", "#input_file", function(){
+        file = this.files;
+        if(file.length > 0){
+            for(i=0; i < file.length; i++){
+                upload_file(file[i]);
+            }
+        }
+    })
+
+    function upload_file(f){
+        var url = '/api/upload_file';
+        var file_data = new FormData();
+        file_data.append('file', f);
+
+        $.ajax({
+            url : url,
+            dataType: 'text',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: file_data,
+            type: 'POST',
+            success: function(res){
+                console.log(res)
+            }
+        })
+    }
+</script>
+
+<% include ../f %>

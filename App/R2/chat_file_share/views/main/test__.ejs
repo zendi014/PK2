@@ -1,0 +1,123 @@
+<% include ../header %>
+
+
+
+
+<div id="page_content">
+    <div id="page_content_inner">
+
+
+        <form class="" action="#" method="post">
+
+            <div class="md-card">
+              <div class="md-card-content">
+
+                <div class="uk-form-row">
+
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-2">
+                            <div class="md-input-wrapper">
+                              <label>Full Name</label>
+
+                              <input type="text" name="full_name"
+                                     class="md-input">
+
+                              <span class="md-input-bar"></span>
+                            </div>
+                        </div>
+                        <div class="uk-width-medium-1-2">
+                            <div class="md-input-wrapper">
+                              <label>Email</label>
+
+                              <input type="email" name="email"
+                                     class="md-input">
+
+                              <span class="md-input-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-2">
+
+                            <select id="select_major" name="major" data-md-selectize>
+                                <option value="">Select Major...</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Electrical Engineering">Electrical Engineering</option>
+                                <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-1-2">
+                        </div>
+                        <div class="uk-width-medium-1-2">
+
+                            <a class="md-btn md-btn-primary" id="btn_submit"
+                               href="JavaScript:void(0);" style="width:100%">
+                                Submit
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+        </form>
+
+
+
+        <div class="md-card uk-margin-medium-top">
+            <div class="md-card-content">
+                <div class="md-input-wrapper">
+                    <label>Search</label>
+
+                    <input type="text" id="search_table_test"
+                           class="md-input">
+
+
+                    <span class="md-input-bar"></span>
+                </div>
+                <div class="uk-overflow-container">
+
+                    <table class="uk-table uk-table-hover" id="table_test">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Users</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+<script type='text/javascript' src="/javascripts/main/test.js"></script>
+
+
+
+<!-- serializejson -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"
+    crossorigin="anonymous"></script>
+
+
+<% include ../footer %>
