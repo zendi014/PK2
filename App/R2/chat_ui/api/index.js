@@ -22,8 +22,8 @@ const st = require('./resources/students');
 
 
 
+let log_files = require('./resources/log_files.js');
 
-//npm i formidable --save
 var formidable = require('formidable');
 r.post('/upload_file', function(req, res){
     var f = new formidable.IncomingForm();
@@ -35,9 +35,17 @@ r.post('/upload_file', function(req, res){
         file.path = path;
     });
     f.on('file', function (name, file) {
-        res.status(200).json({
-            name: file.name,
-            path: path
+        let lf = log_files.add_log_files;
+        new lf({
+            "file_name": file.name,
+            "path": path,
+            "size": file.size,
+            "created_at": new Date().getTime()
+        }).then(function(r){
+                res.status(200).json({
+                    name: file.name,
+                    path: path
+                })
         })
     });
 })
