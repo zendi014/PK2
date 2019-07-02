@@ -159,7 +159,20 @@
         })
 
         function get_table_data(udata){
-            console.log(udata)
+            $("#table_user tbody").empty();
+            udata.forEach(v => {
+                let el = `
+                    <tr>
+                        <td>
+                            <b>${v.first_name}, ${v.last_name}</b>
+                            <br/>${v.major}
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                `;
+                $("#table_user tbody").append(el);
+            });
         }
     </script>
 
