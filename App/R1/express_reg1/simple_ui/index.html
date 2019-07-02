@@ -165,7 +165,7 @@
                 let el = `
                     <tr>
                         <td>
-                            <b>${v.first_name}, ${v.last_name}</b>
+                            <b>${v.first_name.toUpperCase()}, ${v.last_name.toUpperCase()}</b>
                             <br/>${v.major}
                         </td>
                         <td>
@@ -184,9 +184,9 @@
             });
         }
     
-        $(".edit").click(function(){
+        $("#table_user").on("click", ".edit", function(){
             id = $(this).attr("dt");
-            console.log(id)
+            alert(id + "Clicked!!");
         })
 
         $("#search").on("keyup", function(){
