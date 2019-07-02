@@ -25,14 +25,16 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="first_name">First Name</label>
-                        <input type="text" class="form-control" id="first_name" placeholder="First Name">
+                        <input type="text" class="form-control"
+                               id="first_name" placeholder="First Name">
                     </div>
                 </div>
 
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+                        <input type="text" class="form-control"
+                               id="last_name" placeholder="Last Name">
                     </div>
                 </div>
             </div>
@@ -41,14 +43,16 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control"
+                               id="email" placeholder="Email">
                     </div>
                 </div>
 
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Address">
+                        <input type="text" class="form-control"
+                               id="address" placeholder="Address">
                     </div>
                 </div>
             </div>
@@ -57,14 +61,16 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="number" class="form-control" id="phone" placeholder="Phone">
+                        <input type="number" class="form-control"
+                               id="phone" placeholder="Phone">
                     </div>
                 </div>
 
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="religion">Religion</label>
-                        <input type="text" class="form-control" id="religion" placeholder="Religion">
+                        <input type="text" class="form-control"
+                               id="religion" placeholder="Religion">
                     </div>
                 </div>
             </div>
@@ -73,14 +79,16 @@
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="major">Major</label>
-                        <input type="text" class="form-control" id="major" placeholder="Major">
+                        <input type="text" class="form-control"
+                               id="major" placeholder="Major">
                     </div>
                 </div>
 
                 <div class="col-sm">
                     <div class="form-group">
                         <label for="status">Status</label>
-                        <input type="text" class="form-control" id="status" placeholder="Status">
+                        <input type="text" class="form-control"
+                               id="status" placeholder="Status">
                     </div>
                 </div>
             </div>
@@ -89,7 +97,8 @@
                 <div class="col-sm">
                 </div>
                 <div class="col-sm">
-                    <button type="button" id="register" class="btn btn-danger">REGISTER</button>
+                    <button type="button" id="register"
+                            class="btn btn-danger">REGISTER</button>
                 </div>
             </div>
 
@@ -99,15 +108,15 @@
                 </div>
                 <div class="col-sm">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="search" placeholder="Search">
+                        <input type="text" class="form-control" 
+                               id="search" placeholder="Search">
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-sm">
-                    <table class="table table-striped"
-                           id="table_user">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>User</th>
@@ -115,12 +124,12 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody>                            
                         </tbody>
                     </table>
                 </div>
             </div>
-
+            
         </div>
 
 
@@ -132,9 +141,7 @@
 
 
     <script>
-
-        let user_data = [];
-        $("#register").click(function () {
+        $("#register").click(function(){
             var first_name = $("#first_name").val();
             var last_name = $("#last_name").val();
             var email = $("#email").val();
@@ -154,13 +161,8 @@
                 major,
                 status
             }
-            user_data.push(dt);
-            get_table_data(user_data);
+            console.log(dt)
         })
-
-        function get_table_data(udata){
-            console.log(udata)
-        }
     </script>
 
 
