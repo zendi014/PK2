@@ -167,8 +167,15 @@
                             <b>${v.first_name}, ${v.last_name}</b>
                             <br/>${v.major}
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            ${v.email} | ${v.phone}<br />
+                            ${v.address}, ${v.status}<br/>
+                        </td>
+                        <td>
+                            <a href="#">edit</a> | 
+                            <a href="#">view</a> | 
+                            <a href="#">delete</a>
+                        </td>
                     </tr>
                 `;
                 $("#table_user tbody").append(el);
