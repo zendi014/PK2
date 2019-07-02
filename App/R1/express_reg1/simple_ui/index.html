@@ -173,9 +173,15 @@
                             ${v.address}, ${v.status}<br/>
                         </td>
                         <td>
-                            <a href="#" class="edit" dt="${id}">edit</a> | 
-                            <a href="#" class="view" dt="${id}">view</a> |
-                            <a href="#" class="delete" dt="${id}">delete</a>
+                            <a href="#" class="edit" dt="${id}">
+                                <span class="badge badge-warning">Edit</span>
+                            </a> | 
+                            <a href="#" class="view" dt="${id}">
+                                <span class="badge badge-primary">View</span>
+                            </a> |
+                            <a href="#" class="delete" dt="${id}">
+                                <span class="badge badge-danger">Delete</span>
+                            </a>
                         </td>
                     </tr>
                 `;
