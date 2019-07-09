@@ -5,8 +5,8 @@ var r = e.Router();
 var u = require('./resources/users');
 r.get('/users', u.read); //Read
 r.post('/users', u.create); //Create
-r.put('/user/:key', u.update); //Update
-r.delete('/user/:key', u.delete); //Delete
+r.post('/user/update', u.update); //Update
+r.post('/user/delete', u.delete); //Delete
 
 
 var l = require('./resources/lectures');

@@ -191,10 +191,11 @@
       });
     }
 
-    $("#table_user").on("click", ".edit", function () {
-      id = $(this).attr("dt");
-      alert(id + " Clicked!!");
-    })
+    $("#table_user").on("click", ".delete", function () {
+      ukey = $(this).attr("dt");
+      $.post("/api/user/delete", {user_key:ukey}, function(res){
+      })
+    });
 
     $("#search").on("keyup", function () {
       txt = $(this).val().toLowerCase();
