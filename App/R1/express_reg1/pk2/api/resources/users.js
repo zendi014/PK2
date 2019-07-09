@@ -13,6 +13,13 @@ module.exports = {
         })
     },
 
+    detail(req, res){
+        users.doc(req.params.user_key)
+            .get().then((s) => {
+                res.status(201).json(s.data())
+        })
+    },
+
     create(req, res) {
         let user = {
             "user_key": "",

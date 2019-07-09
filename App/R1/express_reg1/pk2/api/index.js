@@ -4,6 +4,7 @@ var r = e.Router();
 
 var u = require('./resources/users');
 r.get('/users', u.read); //Read
+r.get('/user/:user_key', u.detail); //Detail
 r.post('/users', u.create); //Create
 r.post('/user/update', u.update); //Update
 r.post('/user/delete', u.delete); //Delete
