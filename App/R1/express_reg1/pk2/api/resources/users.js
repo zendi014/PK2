@@ -48,7 +48,7 @@ module.exports = {
 
     delete(req, res) {
         users.doc(req.body.user_key).delete().then((s) => {
-            res.status(201).json(user)
+            res.status(201).json(req.body.user_key)
         })
     },
 };
