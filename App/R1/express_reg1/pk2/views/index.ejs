@@ -198,6 +198,20 @@
       })
     });
 
+    $("#table_user").on("click", ".view", function () {
+      ukey = $(this).attr("dt");
+      $.get("/api/user/"+ukey).done(function(v){
+        $("#first_name").val(v.full_name.split(" ")[0]);
+        $("#last_name").val(v.full_name.split(" ")[1]);
+        $("#email").val(v.email);
+        $("#address").val(v.address);
+        $("#phone").val(v.phone);
+        $("#religion").val(v.religion);
+        $("#major").val(v.major);
+        $("#status").val(v.status);
+      })
+    });
+
     $("#search").on("keyup", function () {
       txt = $(this).val().toLowerCase();
       $("#table_user tr").filter(function () {
