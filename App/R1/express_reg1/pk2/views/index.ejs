@@ -157,35 +157,36 @@
       })
     })
 
-    let id = 0;
+    
     function get_table_data() {
       $("#table_user tbody").empty();
-      udata.forEach(v => {
-        let el = `
-                    <tr>
-                        <td>
-                            <b>${v.first_name.toUpperCase()}, ${v.last_name.toUpperCase()}</b>
-                            <br/>${v.major}
-                        </td>
-                        <td>
-                            ${v.email} | ${v.phone}<br />
-                            ${v.address}, ${v.status}<br/>
-                        </td>
-                        <td>
-                            <a href="#" class="edit" dt="${id}">
-                                <span class="badge badge-warning">Edit</span>
-                            </a> | 
-                            <a href="#" class="view" dt="${id}">
-                                <span class="badge badge-primary">View</span>
-                            </a> |
-                            <a href="#" class="delete" dt="${id}">
-                                <span class="badge badge-danger">Delete</span>
-                            </a>
-                        </td>
-                    </tr>
-                `;
-        $("#table_user tbody").append(el);
-        id++;
+      $.get("/api/users").done(function(res){
+        res.forEach(v => {
+          let el = `
+          <tr>
+            <td>
+              <b>${v.first_name.toUpperCase()}, ${v.last_name.toUpperCase()}</b>
+              <br />${v.major}
+            </td>
+            <td>
+              ${v.email} | ${v.phone}<br />
+              ${v.address}, ${v.status}<br />
+            </td>
+            <td>
+              <a href="#" class="edit" dt="${v.user_key}">
+                <span class="badge badge-warning">Edit</span>
+              </a> |
+              <a href="#" class="view" dt="${v.user_key}">
+                <span class="badge badge-primary">View</span>
+              </a> |
+              <a href="#" class="delete" dt="${v.user_key}">
+                <span class="badge badge-danger">Delete</span>
+              </a>
+            </td>
+          </tr>
+          `;
+          $("#table_user tbody").append(el);
+        });
       });
     }
 
