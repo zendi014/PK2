@@ -132,7 +132,7 @@
 
   <script>
     get_table_data();
-    
+
     $("#register").click(function () {
       var first_name = $("#first_name").val();
       var last_name = $("#last_name").val();
@@ -166,7 +166,7 @@
           let el = `
           <tr>
             <td>
-              <b>${v.first_name.toUpperCase()}, ${v.last_name.toUpperCase()}</b>
+              <b>${v.full_name.toUpperCase()}</b>
               <br />${v.major}
             </td>
             <td>
