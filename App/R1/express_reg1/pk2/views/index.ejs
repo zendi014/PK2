@@ -152,13 +152,13 @@
         major,
         status
       }
-      user_data.push(dt);
-      get_table_data(user_data);
+      $.post("/api/users", dt, function(res){
+          get_table_data();
+      })
     })
 
     let id = 0;
-
-    function get_table_data(udata) {
+    function get_table_data() {
       $("#table_user tbody").empty();
       udata.forEach(v => {
         let el = `

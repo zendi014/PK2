@@ -7,7 +7,7 @@ module.exports = {
         var udt = [];
         users.get().then( (s) => {
             s.forEach((dt) => {
-                udt.push( dt.data() );
+                udt.push(dt.data());
             })
             res.status(201).json(udt)
         })
@@ -16,13 +16,12 @@ module.exports = {
     create(req, res) {
         let user = {
             "user_key": "",
-            "full_name" : req.body.full_name,
+            "full_name": req.body.first_name+" "+req.body.last_name,
             "email": req.body.email,
             "address": req.body.address,
             "phone": req.body.phone,
             "major": req.body.major,
             "religion": req.body.religion,
-            "birth_date": req.body.birth_date,
             "status": req.body.status,
         }
         users.add( user ).then((s) => {
@@ -40,7 +39,6 @@ module.exports = {
             "phone": req.body.phone,
             "major": req.body.major,
             "religion": req.body.religion,
-            "birth_date": req.body.birth_date,
             "status": req.body.status,
         }
         users.doc(req.body.user_key).update(user).then((s) => {
