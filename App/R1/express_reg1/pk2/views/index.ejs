@@ -89,7 +89,7 @@
         <div class="col-sm">
         </div>
         <div class="col-sm">
-          <button type="button" id="register" class="btn btn-danger">REGISTER</button>
+          <button type="button" id="register" class="btn btn-danger" state="register">REGISTER</button>
         </div>
       </div>
 
@@ -132,6 +132,7 @@
 
   <script>
     get_table_data();
+    let selected_user = '';
 
     $("#register").click(function () {
       var first_name = $("#first_name").val();
@@ -153,9 +154,19 @@
         major,
         status
       }
-      $.post("/api/users", dt, function(res){
+
+      if($(this).attr("state") == "register"){        
+        $.post("/api/users", dt, function (res) {
           get_table_data();
-      })
+        })
+      }else if ($(this).attr("state") == "view") {
+        location.reload(); //refresh
+      }else if ($(this).attr("state") == "edit") {//update here
+        dt.user_key = selected_user;
+        $.post("/api/user/update", dt, function(res){
+          get_table_data();
+        })
+      }      
     })
 
     
@@ -167,11 +178,11 @@
           <tr>
             <td>
               <b>${v.full_name.toUpperCase()}</b>
-              <br />${v.major}
+              <br/>${v.status}, ${v.major}
             </td>
             <td>
-              ${v.email} | ${v.phone}<br />
-              ${v.address}, ${v.status}<br />
+              ${v.email} (<b>${v.phone}</b>)<br />
+              ${v.address}<br />
             </td>
             <td>
               <a href="#" class="edit" dt="${v.user_key}">
@@ -198,6 +209,26 @@
       })
     });
 
+    $("#table_user").on("click", ".edit", function () {
+        ukey = $(this).attr("dt");
+        $.get("/api/user/" + ukey).done(function (v) {
+          $("#first_name").val(v.full_name.split(" ")[0]);
+          $("#last_name").val(v.full_name.split(" ")[1]);
+          $("#email").val(v.email);
+          $("#address").val(v.address);
+          $("#phone").val(v.phone);
+          $("#religion").val(v.religion);
+          $("#major").val(v.major);
+          $("#status").val(v.status);
+
+          selected_user = ukey; //user key for updating
+
+          //change button status to edit mode
+          $("#register").text("UPDATE DATA").attr("state", "edit").addClass("btn-warning")
+                        .removeClass("btn-danger").removeClass("btn-success");
+        })
+      });
+
     $("#table_user").on("click", ".view", function () {
       ukey = $(this).attr("dt");
       $.get("/api/user/"+ukey).done(function(v){
@@ -209,6 +240,10 @@
         $("#religion").val(v.religion);
         $("#major").val(v.major);
         $("#status").val(v.status);
+
+        //change button status to view mode
+        $("#register").text("OK").attr("state", "view").addClass("btn-success")
+                      .removeClass("btn-danger").removeClass("btn-warning");
       })
     });
 

@@ -39,18 +39,18 @@ module.exports = {
 
     update(req, res) {
         let user = {
-            "user_key": "",
-            "full_name": req.body.full_name,
+            "user_key": req.body.user_key,
+            "full_name": req.body.first_name + " " + req.body.last_name,
             "email": req.body.email,
             "address": req.body.address,
             "phone": req.body.phone,
             "major": req.body.major,
             "religion": req.body.religion,
-            "status": req.body.status,
+            "status": req.body.status
         }
         users.doc(req.body.user_key).update(user).then((s) => {
             res.status(201).json(user)
-        })
+        })        
     },
 
     delete(req, res) {
