@@ -155,7 +155,7 @@
         status
       }
 
-      if($(this).attr("state") == "register"){//create here     
+      if($(this).attr("state") == "register"){//create here
         $.post("/api/users", dt, function (res) {
           get_table_data();
         })
@@ -166,10 +166,10 @@
         $.post("/api/user/update", dt, function(res){
           get_table_data();
         })
-      }      
+      }
     })
 
-    
+
     function get_table_data() {
       $("#table_user tbody").empty();
       $.get("/api/users").done(function(res){
@@ -256,12 +256,12 @@
         $(this).toggle($(this).text().toLowerCase().indexOf(txt) > -1);
       })
     })
-  
-  
+
+
   </script>
 
   </script>
-  
+
 </body>
 
 </html>
